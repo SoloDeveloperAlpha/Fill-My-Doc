@@ -16,9 +16,8 @@ export default function Header() {
       const foundOption = options.find(
         (item) => item.name.toLowerCase() === searchTerm.toLowerCase()
       );
-
       if (foundOption) {
-        window.location.href = `/#${foundOption.link}`;
+        window.location.href = `/Fill-My-Doc/#${foundOption.link}`;
       } else {
         window.location.href = "/#/pagenotfound";
       }
