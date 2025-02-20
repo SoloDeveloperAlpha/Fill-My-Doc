@@ -18,9 +18,9 @@ export default function Header() {
       );
 
       if (foundOption) {
-        window.location.href = foundOption.link;
+        window.location.href = `/#${foundOption.link}`;
       } else {
-        window.location.href = "/pagenotfound";
+        window.location.href = "/#/pagenotfound";
       }
 
       // Limpiar el campo después de buscar
