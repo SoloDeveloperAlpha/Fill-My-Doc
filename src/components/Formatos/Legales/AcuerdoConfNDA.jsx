@@ -396,7 +396,7 @@ export function AcuerdoNDAComponent() {
   return (
     <div className="container">
       <div className="col1">
-        <Link to="/Fill-My-Doc/document/content/acuerdoNDA/doc">
+        <Link to="/document/content/acuerdoNDA/doc">
           <img src={contrato} alt="Acuerdo de Confidencialidad" />
         </Link>
         <div className="pasos">
@@ -449,7 +449,7 @@ export function AcuerdoNDAComponent() {
               </span>
             </div>
           </div>
-          <Link to="/Fill-My-Doc/document/content/acuerdoNDA/doc" id='rellenar'>Rellenar el modelo</Link>
+          <Link to="/document/content/acuerdoNDA/doc" id='rellenar'>Rellenar el modelo</Link>
         </div>
         <div className="explain">
           <div style={{ fontFamily: "Arial, sans-serif", padding: "20px", lineHeight: "1.6" }}>

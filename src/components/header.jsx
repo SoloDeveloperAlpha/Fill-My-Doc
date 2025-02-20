@@ -20,7 +20,7 @@ export default function Header() {
       if (foundOption) {
         window.location.href = foundOption.link;
       } else {
-        window.location.href = "/Fill-My-Doc/pagenotfound";
+        window.location.href = "/pagenotfound";
       }
 
       // Limpiar el campo después de buscar
@@ -52,9 +52,9 @@ export default function Header() {
       <div className={estadoCab ? "cabecera_oculta" : "cabecera_oculta hid"}>
         <nav>
           <ul style={{ width: "100%" }}>
-            <li><Link to="/Fill-My-Doc" onClick={() => setEstadoCab(!estadoCab)} >INICIO</Link></li>
-            <li><Link to="/Fill-My-Doc/document" onClick={() => setEstadoCab(!estadoCab)}>DOCUMENTOS</Link></li>
-            <li><Link to="/Fill-My-Doc/nosotros" onClick={() => setEstadoCab(!estadoCab)}>NOSOTROS</Link></li>
+            <li><Link to="/inicio" onClick={() => setEstadoCab(!estadoCab)} >INICIO</Link></li>
+            <li><Link to="/document" onClick={() => setEstadoCab(!estadoCab)}>DOCUMENTOS</Link></li>
+            <li><Link to="/nosotros" onClick={() => setEstadoCab(!estadoCab)}>NOSOTROS</Link></li>
           </ul>
         </nav>
 
@@ -62,15 +62,15 @@ export default function Header() {
       <div className="cabecera">
         <div className="cab">
           <div className="logo">
-            <Link style={{ display: "flex" }} to="/Fill-My-Doc">
+            <Link style={{ display: "flex" }} to="/inicio">
               <img src={log} style={{ width: "14em" }} alt="Logo" />
             </Link>
           </div>
           <nav>
             <ul>
-              <li><Link to="/Fill-My-Doc">INICIO</Link></li>
-              <li><Link to="/Fill-My-Doc/document">DOCUMENTOS</Link></li>
-              <li><Link to="/Fill-My-Doc/nosotros">NOSOTROS</Link></li>
+              <li><Link to="/inicio">INICIO</Link></li>
+              <li><Link to="/document">DOCUMENTOS</Link></li>
+              <li><Link to="/nosotros">NOSOTROS</Link></li>
             </ul>
           </nav>
           <div className="buscador">

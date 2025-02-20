@@ -399,7 +399,7 @@ export function DeclarJuradDomComponent() {
   return (
     <div className="container">
       <div className="col1">
-        <Link to="/Fill-My-Doc/document/content/declarJurDom/doc">
+        <Link to="/document/content/declarJurDom/doc">
           <img src={contrato} alt="" />
         </Link>
         <div className="pasos">
@@ -452,7 +452,7 @@ export function DeclarJuradDomComponent() {
               </span>
             </div>
           </div>
-          <Link to="/Fill-My-Doc/document/content/declarJurDom/doc" id='rellenar'>Rellenar el modelo</Link>
+          <Link to="/document/content/declarJurDom/doc" id='rellenar'>Rellenar el modelo</Link>
         </div>
         <div className="explain">
           <div style={{ fontFamily: "Arial, sans-serif", padding: "20px", lineHeight: "1.6" }}>

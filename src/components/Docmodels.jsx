@@ -5,29 +5,29 @@ import { Link } from 'react-router-dom';
 export const categories = [
   {
     title: "Personales y de Identificación", items: [
-      { name: "Formato de solicitud de empleo", link: "/Fill-My-Doc/document/content/solempleo" },
-      { name: "Formato de currículum vitae (CV)", link: "/Fill-My-Doc/document/content/formCV" },
-      { name: "Carta de recomendación laboral o personal", link: "/Fill-My-Doc/document/content/recLetter" },
-      { name: "Carta de renuncia", link: "/Fill-My-Doc/document/content/cartaRenuncia" },
-      { name: "Carta de autorización (para trámites diversos)", link: "/Fill-My-Doc/document/content/cartaAutorizacion" },
-      { name: "Formulario para renovación de DNI o pasaporte", link: "/Fill-My-Doc/document/content/renovDNIPassP" },
+      { name: "Formato de solicitud de empleo", link: "/document/content/solempleo" },
+      { name: "Formato de currículum vitae (CV)", link: "/document/content/formCV" },
+      { name: "Carta de recomendación laboral o personal", link: "/document/content/recLetter" },
+      { name: "Carta de renuncia", link: "/document/content/cartaRenuncia" },
+      { name: "Carta de autorización (para trámites diversos)", link: "/document/content/cartaAutorizacion" },
+      { name: "Formulario para renovación de DNI o pasaporte", link: "/document/content/renovDNIPassP" },
     ]
   },
   {
     title: "Financieros", items: [
-      { name: "Formulario para apertura de cuenta bancaria", link: "/Fill-My-Doc/document/content/solAccountOpen" },
-      { name: "Solicitud de crédito personal o hipotecario", link: "/Fill-My-Doc/document/content/solCredHip" },
-      { name: "Contrato de arrendamiento de Vivienda Habitual", link: "/Fill-My-Doc/document/content/contrArrend" },
-      { name: "Declaración jurada de ingresos", link: "/Fill-My-Doc/document/content/declarJurIng" },
-      { name: "Formulario de declaración de impuestos", link: "/Fill-My-Doc/document/content/formDeclJurImp" },
+      { name: "Formulario para apertura de cuenta bancaria", link: "/document/content/solAccountOpen" },
+      { name: "Solicitud de crédito personal o hipotecario", link: "/document/content/solCredHip" },
+      { name: "Contrato de arrendamiento de Vivienda Habitual", link: "/document/content/contrArrend" },
+      { name: "Declaración jurada de ingresos", link: "/document/content/declarJurIng" },
+      { name: "Formulario de declaración de impuestos", link: "/document/content/formDeclJurImp" },
     ]
   },
   {
     title: "Legales", items: [
-      { name: "Contratos (compraventa, préstamo, servicio)", link: "/Fill-My-Doc/document/content/contratGen" },
-      { name: "Poder notarial simple", link: "/Fill-My-Doc/document/content/poderNotarial" },
-      { name: "Declaración jurada de domicilio", link: "/Fill-My-Doc/document/content/declarJurDom" },
-      { name: "Acuerdo de confidencialidad (NDA)", link: "/Fill-My-Doc/document/content/acuerdoNDA" },
+      { name: "Contratos (compraventa, préstamo, servicio)", link: "/document/content/contratGen" },
+      { name: "Poder notarial simple", link: "/document/content/poderNotarial" },
+      { name: "Declaración jurada de domicilio", link: "/document/content/declarJurDom" },
+      { name: "Acuerdo de confidencialidad (NDA)", link: "/document/content/acuerdoNDA" },
     ],
   }
 ];
