@@ -11,22 +11,21 @@ export default function Header() {
   const handleSearch = (e) => {
     if (e.key === "Enter" || e.type === "click") {
       e.preventDefault();
-      const selectedOption = document.querySelector(`#search-options option[value="${searchTerm}"]`);
-      const link = selectedOption?.getAttribute('data-link');
 
-      if (link) {
-        window.location.href = link;
+      // Buscar en las opciones el nombre exacto
+      const foundOption = options.find(
+        (item) => item.name.toLowerCase() === searchTerm.toLowerCase()
+      );
+
+      if (foundOption) {
+        window.location.href = foundOption.link;
       } else {
-        const foundOption = options.find(item => item.name.toLowerCase() === searchTerm.toLowerCase());
-        if (foundOption) {
-          window.location.href = foundOption.link;
-        } else {
-          window.location.href = "/Fill-My-Doc/pagenotfound";
-        }
+        window.location.href = "/Fill-My-Doc/pagenotfound";
       }
 
       // Limpiar el campo después de buscar
-      setSearchTerm('');
+      setSearchTerm("");
+      setShowSuggestions(false);
     }
   };
 

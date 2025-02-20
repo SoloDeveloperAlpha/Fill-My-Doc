@@ -6,7 +6,6 @@ import './App.css';
 import ScrollToTop from './utils/ScrollToTop.jsx';
 
 function App() {
-
   return (
     <div className='App'>
       <BrowserRouter>
@@ -19,9 +18,8 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
-
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
