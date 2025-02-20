@@ -21,7 +21,7 @@ export default function Header() {
         if (foundOption) {
           window.location.href = foundOption.link;
         } else {
-          window.location.href = "/pagenotfound";
+          window.location.href = "/Fill-My-Doc/pagenotfound";
         }
       }
 
