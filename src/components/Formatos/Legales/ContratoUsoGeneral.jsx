@@ -318,7 +318,7 @@ export default function ContratoUsoGeneral() {
           <Text>{formData.nombreContratado || "Firma del Contratado"}</Text>
         </View>
       </Page>
-    </Document>
+    </Document >
   );
 
   const styles = StyleSheet.create({
@@ -423,7 +423,7 @@ export function ContratoUsoGeneralComponent() {
   return (
     <div className="container">
       <div className="col1">
-        <Link to="/document/content/contratGen/doc">
+        <Link to="/Fill-My-Doc/document/content/contratGen/doc">
           <img src={contrato} alt="Contrato de Uso General" />
         </Link>
         <div className="pasos">
@@ -483,7 +483,7 @@ export function ContratoUsoGeneralComponent() {
               </span>
             </div>
           </div>
-          <Link to="/document/content/contratGen/doc" id='rellenar'>Rellenar el modelo</Link>
+          <Link to="/Fill-My-Doc/document/content/contratGen/doc" id='rellenar'>Rellenar el modelo</Link>
         </div>
         <div className="explain">
           <div style={{ fontFamily: "Arial, sans-serif", padding: "20px", lineHeight: "1.6" }}>

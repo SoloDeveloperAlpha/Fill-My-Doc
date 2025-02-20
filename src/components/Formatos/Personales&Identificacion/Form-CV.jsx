@@ -310,7 +310,7 @@ export function CurriculumComponent() {
     return (
         <div className="container">
             <div className="col1">
-                <Link to="/document/content/formCV/doc">
+                <Link to="/Fill-My-Doc/document/content/formCV/doc">
                     <img src={contrato} alt="" />
                 </Link>
                 <div className="pasos">
@@ -370,7 +370,7 @@ export function CurriculumComponent() {
                             </span>
                         </div>
                     </div>
-                    <Link to="/document/content/formCV/doc" id='rellenar'>Rellenar el modelo</Link>
+                    <Link to="/Fill-My-Doc/document/content/formCV/doc" id='rellenar'>Rellenar el modelo</Link>
                 </div>
                 <div className="explain">
 

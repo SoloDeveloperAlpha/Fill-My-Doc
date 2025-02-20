@@ -82,7 +82,7 @@ export default function RecommendationLetter() {
           <Text style={{ ...styles.text, backgroundColor: currentInput === 7 ? "yellow" : "transparent" }}>Email: {formData.recommenderEmail || "__________"}</Text>
         </View>
       </Page>
-    </Document>
+    </Document >
   );
 
   const styles = StyleSheet.create({
@@ -216,7 +216,7 @@ export function RecommendationComponent() {
   return (
     <div className="container">
       <div className="col1">
-        <Link to="/document/content/recLetter/doc">
+        <Link to="/Fill-My-Doc/document/content/recLetter/doc">
           <img src={contrato} alt="" />
         </Link>
         <div className="pasos">
@@ -276,7 +276,7 @@ export function RecommendationComponent() {
               </span>
             </div>
           </div>
-          <Link to="/document/content/recLetter/doc" id='rellenar'>Rellenar el modelo</Link>
+          <Link to="/Fill-My-Doc/document/content/recLetter/doc" id='rellenar'>Rellenar el modelo</Link>
         </div>
         <div className="explain">
           <div style={{ fontFamily: "Arial, sans-serif", padding: "20px", lineHeight: "1.6" }}>

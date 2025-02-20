@@ -226,7 +226,7 @@ export default function ContratoArrend() {
           <Text style={styles.text}>Arrendatario</Text>
         </View>
       </Page>
-    </Document>
+    </Document >
   );
 
   const styles = StyleSheet.create({
@@ -301,7 +301,7 @@ export function ContratArrendComponent() {
   return (
     <div className="container">
       <div className="col1">
-        <Link to="/document/content/contrArrend/doc">
+        <Link to="/Fill-My-Doc/document/content/contrArrend/doc">
           <img src={contrato} alt="" />
         </Link>
         <div className="pasos">
@@ -361,7 +361,7 @@ export function ContratArrendComponent() {
               </span>
             </div>
           </div>
-          <Link to="/document/content/contrArrend/doc" id='rellenar'>Rellenar el modelo</Link>
+          <Link to="/Fill-My-Doc/document/content/contrArrend/doc" id='rellenar'>Rellenar el modelo</Link>
         </div>
         <div className="explain">
           <div style={{ fontFamily: "Arial, sans-serif", padding: "20px", lineHeight: "1.6" }}>

@@ -223,7 +223,7 @@ export function RenunciaComponent() {
   return (
     <div className="container">
       <div className="col1">
-        <Link to="/document/content/cartaRenuncia/doc">
+        <Link to="/Fill-My-Doc/document/content/cartaRenuncia/doc">
           <img src={contrato} alt="" />
         </Link>
         <div className="pasos">
@@ -283,7 +283,7 @@ export function RenunciaComponent() {
               </span>
             </div>
           </div>
-          <Link to="/document/content/cartaRenuncia/doc" id='rellenar'>Rellenar el modelo</Link>
+          <Link to="/Fill-My-Doc/document/content/cartaRenuncia/doc" id='rellenar'>Rellenar el modelo</Link>
         </div>
         <div className="explain">
           <div style={{ fontFamily: "Arial, sans-serif", padding: "20px", lineHeight: "1.6" }}>

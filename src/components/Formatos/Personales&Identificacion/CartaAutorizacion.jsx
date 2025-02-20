@@ -232,7 +232,7 @@ export function AutorizacionComponent() {
   return (
     <div className="container">
       <div className="col1">
-        <Link to="/document/content/cartaAutorizacion/doc">
+        <Link to="/Fill-My-Doc/document/content/cartaAutorizacion/doc">
           <img src={contrato} alt="" />
         </Link>
         <div className="pasos">
@@ -292,7 +292,7 @@ export function AutorizacionComponent() {
               </span>
             </div>
           </div>
-          <Link to="/document/content/cartaAutorizacion/doc" id='rellenar'>Rellenar el modelo</Link>
+          <Link to="/Fill-My-Doc/document/content/cartaAutorizacion/doc" id='rellenar'>Rellenar el modelo</Link>
         </div>
         <div className="explain">
           <div style={{ fontFamily: "Arial, sans-serif", padding: "20px", lineHeight: "1.6" }}>

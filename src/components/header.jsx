@@ -53,9 +53,9 @@ export default function Header() {
       <div className={estadoCab ? "cabecera_oculta" : "cabecera_oculta hid"}>
         <nav>
           <ul style={{ width: "100%" }}>
-            <li><Link to="/" onClick={() => setEstadoCab(!estadoCab)} >INICIO</Link></li>
-            <li><Link to="/document" onClick={() => setEstadoCab(!estadoCab)}>DOCUMENTOS</Link></li>
-            <li><Link to="/nosotros" onClick={() => setEstadoCab(!estadoCab)}>NOSOTROS</Link></li>
+            <li><Link to="/Fill-My-Doc" onClick={() => setEstadoCab(!estadoCab)} >INICIO</Link></li>
+            <li><Link to="/Fill-My-Doc/document" onClick={() => setEstadoCab(!estadoCab)}>DOCUMENTOS</Link></li>
+            <li><Link to="/Fill-My-Doc/nosotros" onClick={() => setEstadoCab(!estadoCab)}>NOSOTROS</Link></li>
           </ul>
         </nav>
 
@@ -63,15 +63,15 @@ export default function Header() {
       <div className="cabecera">
         <div className="cab">
           <div className="logo">
-            <Link style={{ display: "flex" }} to="/">
+            <Link style={{ display: "flex" }} to="/Fill-My-Doc">
               <img src={log} style={{ width: "14em" }} alt="Logo" />
             </Link>
           </div>
           <nav>
             <ul>
-              <li><Link to="/">INICIO</Link></li>
-              <li><Link to="/document">DOCUMENTOS</Link></li>
-              <li><Link to="/nosotros">NOSOTROS</Link></li>
+              <li><Link to="/Fill-My-Doc">INICIO</Link></li>
+              <li><Link to="/Fill-My-Doc/document">DOCUMENTOS</Link></li>
+              <li><Link to="/Fill-My-Doc/nosotros">NOSOTROS</Link></li>
             </ul>
           </nav>
           <div className="buscador">

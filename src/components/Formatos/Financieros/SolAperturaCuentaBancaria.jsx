@@ -130,7 +130,7 @@ export default function FormAccountOpening() {
             </View>
           </View>
         </Page>
-      </Document>
+      </Document >
     );
   };
 
@@ -285,7 +285,7 @@ export function FormAccOpenComponent() {
   return (
     <div className="container">
       <div className="col1">
-        <Link to="/document/content/solAccountOpen/doc">
+        <Link to="/Fill-My-Doc/document/content/solAccountOpen/doc">
           <img src={contrato} alt="" />
         </Link>
         <div className="pasos">
@@ -345,7 +345,7 @@ export function FormAccOpenComponent() {
               </span>
             </div>
           </div>
-          <Link to="/document/content/solAccountOpen/doc" id='rellenar'>Rellenar el modelo</Link>
+          <Link to="/Fill-My-Doc/document/content/solAccountOpen/doc" id='rellenar'>Rellenar el modelo</Link>
         </div>
         <div className="explain">
           <div style={{ fontFamily: "Arial, sans-serif", padding: "20px", lineHeight: "1.6" }}>

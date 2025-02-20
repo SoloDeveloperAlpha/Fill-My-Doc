@@ -349,7 +349,7 @@ export default function PoderNotarial() {
           <Text style={{ backgroundColor: currentInput === 5 ? "yellow" : "transparent" }}>{formData.nombreApoderado || "Firma del Apoderado"}</Text>
         </View>
       </Page>
-    </Document>
+    </Document >
   );
 
   return (
@@ -413,7 +413,7 @@ export function PoderNotarialComponent() {
   return (
     <div className="container">
       <div className="col1">
-        <Link to="/document/content/poderNotarial/doc">
+        <Link to="/Fill-My-Doc/document/content/poderNotarial/doc">
           <img src={contrato} alt="Poder Notarial Simple" />
         </Link>
         <div className="pasos">
@@ -473,7 +473,7 @@ export function PoderNotarialComponent() {
               </span>
             </div>
           </div>
-          <Link to="/document/content/poderNotarial/doc" id='rellenar'>Rellenar el modelo</Link>
+          <Link to="/Fill-My-Doc/document/content/poderNotarial/doc" id='rellenar'>Rellenar el modelo</Link>
         </div>
         <div className="explain">
           <div style={{ fontFamily: "Arial, sans-serif", padding: "20px", lineHeight: "1.6" }}>
