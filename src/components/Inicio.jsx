@@ -13,7 +13,7 @@ export default function Inicio() {
       const link = selectedOption ? selectedOption.getAttribute('data-link') : null;
 
       if (link) {
-        window.location.href = `/#${link}`;
+        window.location.href = `/Fill-My-Doc/#${link}`;
       }
     }
   };
