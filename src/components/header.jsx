@@ -19,7 +19,7 @@ export default function Header() {
       if (foundOption) {
         window.location.href = `/Fill-My-Doc/#${foundOption.link}`;
       } else {
-        window.location.href = "/#/pagenotfound";
+        window.location.href = "/Fill-My-Doc/#/pagenotfound";
       }
 
       // Limpiar el campo después de buscar
