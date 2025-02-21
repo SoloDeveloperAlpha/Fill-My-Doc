@@ -5,7 +5,7 @@ import contrato from "../../../assets/curriculum.png";
 import { Link } from "react-router-dom";
 
 export default function FormCV() {
-
+    const [showhid, setShowhid] = useState(false);
     const arregloInputs = [
         { label: "Nombre Completo", type: "text", name: "nombre", placeholder: "Ej: Arturo Vasquez" },
         { label: "Dirección", type: "text", name: "direccion", placeholder: "Ej: Calle Letanias 334" },
@@ -239,10 +239,14 @@ export default function FormCV() {
                 <h2 style={{ paddingBlock: "10px" }}>Formulario de Curriculum Vitae</h2>
                 <ProgressBar percent={Math.round((100 * (currentInput + 1)) / arregloInputs.length)} tamano={arregloInputs.length} />
                 <div className="columnas">
+                    <div className="modelo" style={{ display: showhid ? "flex" : "none" }}>
+                        <i className="ri-information-fill" onClick={() => setShowhid(!showhid)} ></i>
+                        <img src={contrato} alt="Curriculum Vitae" />
+                    </div>
                     <form className="col1" onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1em" }}>
                         {arregloInputs[currentInput].name === "idiomas" ? (
                             <div style={{ display: "flex", flexDirection: "column" }}>
-                                <label>{arregloInputs[currentInput].label}</label>
+                                <label>{arregloInputs[currentInput].label}<i className="ri-information-fill" onClick={() => setShowhid(!showhid)} ></i></label>
                                 <input
                                     type={arregloInputs[currentInput].type}
                                     name={arregloInputs[currentInput].name}
@@ -268,7 +272,7 @@ export default function FormCV() {
                             </div>
                         ) : (
                             <div style={{ display: "flex", flexDirection: "column" }}>
-                                <label>{arregloInputs[currentInput].label}</label>
+                                <label>{arregloInputs[currentInput].label}<i className="ri-information-fill" onClick={() => setShowhid(!showhid)} ></i></label>
                                 <input
                                     type={arregloInputs[currentInput].type}
                                     name={arregloInputs[currentInput].name}
@@ -295,7 +299,7 @@ export default function FormCV() {
                             )}
                         </div>
                     </form>
-                    <div className="col2" style={{ display: "flex", flexDirection: "column", overflowY: "auto" }}>
+                    <div className="col2">
                         <PDFViewer style={{ height: "100%" }}>
                             <FormularioPDF />
                         </PDFViewer>

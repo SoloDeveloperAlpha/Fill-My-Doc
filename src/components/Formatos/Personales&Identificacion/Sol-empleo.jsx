@@ -5,7 +5,7 @@ import contrato from "../../../assets/solempleo.png";
 import { Link } from 'react-router-dom';
 
 export default function SolEmpleo() {
-
+  const [showhid, setShowhid] = useState(false);
   const arregloInputs = [
     { label: "Tipo de puesto buscado", type: "checkbox", name: "puesto", options: ["Full-Time", "Part-Time", "Estacional"] },
     { label: "Ingrese su Nombre", type: "text", name: "nombre", placeholder: "Ej: Arturo" },
@@ -270,12 +270,14 @@ export default function SolEmpleo() {
         <h2 style={{ paddingBlock: "10px" }}>Formulario de Solicitud de Empleo</h2>
         <ProgressBar percent={Math.round((100 * (currentInput + 1)) / arregloInputs.length)} tamano={arregloInputs.length} />
         <div className="columnas">
+          <div className="modelo" style={{ display: showhid ? "flex" : "none" }}>
+            <i className="ri-information-fill" onClick={() => setShowhid(!showhid)} ></i>
+            <img src={contrato} alt="Acuerdo de Confidencialidad" />
+          </div>
           <form className="col1" onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1em" }}>
             {arregloInputs[currentInput].type === "text" && (
               <div style={{ display: "flex", flexDirection: "column" }}>
-                <label>
-                  {arregloInputs[currentInput].label}
-                </label>
+                <label>{arregloInputs[currentInput].label}<i className="ri-information-fill" onClick={() => setShowhid(!showhid)} ></i></label>
                 <input
                   type="text"
                   name={arregloInputs[currentInput].name}
@@ -289,7 +291,7 @@ export default function SolEmpleo() {
 
             {(arregloInputs[currentInput].type === "checkbox" && arregloInputs[currentInput].name === "puesto") && (
               <div style={{ display: "flex", flexDirection: "column" }}>
-                <label>{arregloInputs[currentInput].label}</label>
+                <label>{arregloInputs[currentInput].label}<i className="ri-information-fill" onClick={() => setShowhid(!showhid)} ></i></label>
                 {["Full-Time", "Part-Time", "Estacional"].map((option, index) => (
                   <label key={index} className="block mb-2">
                     <input
@@ -306,7 +308,7 @@ export default function SolEmpleo() {
 
             {(arregloInputs[currentInput].type === "checkbox" && arregloInputs[currentInput].name === "turno") && (
               <div style={{ display: "flex", flexDirection: "column" }}>
-                <label>{arregloInputs[currentInput].label}</label>
+                <label>{arregloInputs[currentInput].label}<i className="ri-information-fill" onClick={() => setShowhid(!showhid)} ></i></label>
                 {["Dia", "Tarde", "Noche", "Fin de Semana"].map((option, index) => (
                   <label key={index} className="block mb-2">
                     <input
@@ -323,7 +325,7 @@ export default function SolEmpleo() {
 
             {(arregloInputs[currentInput].type === "checkbox" && arregloInputs[currentInput].name === "verfedad") && (
               <div style={{ display: "flex", flexDirection: "column" }}>
-                <label>{arregloInputs[currentInput].label}</label>
+                <label>{arregloInputs[currentInput].label}<i className="ri-information-fill" onClick={() => setShowhid(!showhid)} ></i></label>
                 {["Si", "No"].map((option, index) => (
                   <label key={index} className="block mb-2">
                     <input
@@ -340,9 +342,7 @@ export default function SolEmpleo() {
 
             {arregloInputs[currentInput].type === "email" && (
               <div style={{ display: "flex", flexDirection: "column" }}>
-                <label className="block mb-2 font-semibold">
-                  {arregloInputs[currentInput].label}
-                </label>
+                <label>{arregloInputs[currentInput].label}<i className="ri-information-fill" onClick={() => setShowhid(!showhid)} ></i></label>
                 <input
                   type="email"
                   name={arregloInputs[currentInput].name}
@@ -367,7 +367,7 @@ export default function SolEmpleo() {
               )}
             </div>
           </form>
-          <div className="col2" style={{ display: "flex", flexDirection: "column", overflowY: "auto" }}>
+          <div className="col2">
             <PDFViewer style={{ height: "100%" }}>
               <FormularioPDF />
             </PDFViewer>

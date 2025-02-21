@@ -28,6 +28,7 @@ export default function AcuerdoConfNDA() {
 
   const [currentInput, setCurrentInput] = useState(0);
   const [isExportingPDF, setIsExportingPDF] = useState(false);
+  const [showhid, setShowhid] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -311,12 +312,16 @@ export default function AcuerdoConfNDA() {
           tamano={arregloInputs.length}
         />
         <div className="columnas">
+          <div className="modelo" style={{ display: showhid ? "flex" : "none" }}>
+            <i className="ri-information-fill" onClick={() => setShowhid(!showhid)} ></i>
+            <img src={contrato} alt="Acuerdo de Confidencialidad" />
+          </div>
           <form
             className="col1"
             onSubmit={handleSubmit}
             style={{ display: "flex", flexDirection: "column", gap: "1em" }}
           >
-            <label>{arregloInputs[currentInput].label}</label>
+            <label>{arregloInputs[currentInput].label}<i className="ri-information-fill" onClick={() => setShowhid(!showhid)} ></i></label>
 
             {arregloInputs[currentInput].type === "textarea" ? (
               <textarea
@@ -380,7 +385,7 @@ export default function AcuerdoConfNDA() {
             </div>
           </form>
 
-          <div className="col2" style={{ display: "flex", flexDirection: "column", overflowY: "auto" }}>
+          <div className="col2" >
             <PDFViewer style={{ height: "100%" }}>
               <NDAPDF />
             </PDFViewer>

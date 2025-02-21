@@ -47,6 +47,7 @@ export default function PoderNotarial() {
 
   const [currentInput, setCurrentInput] = useState(0);
   const [isExportingPDF, setIsExportingPDF] = useState(false);
+  const [showhid, setShowhid] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -358,8 +359,12 @@ export default function PoderNotarial() {
         <h2 style={{ paddingBlock: "10px" }}>Poder Notarial Simple</h2>
         <ProgressBar percent={Math.round((100 * (currentInput + 1)) / arregloInputs.length)} tamano={arregloInputs.length} />
         <div className="columnas">
+          <div className="modelo" style={{ display: showhid ? "flex" : "none" }}>
+            <i className="ri-information-fill" onClick={() => setShowhid(!showhid)} ></i>
+            <img src={contrato} alt="Acuerdo de Confidencialidad" />
+          </div>
           <form className="col1" style={{ display: "flex", flexDirection: "column", gap: "1em" }}>
-            <label>{arregloInputs[currentInput].label}</label>
+            <label>{arregloInputs[currentInput].label}<i className="ri-information-fill" onClick={() => setShowhid(!showhid)} ></i></label>
             <input
               type={arregloInputs[currentInput].type}
               name={arregloInputs[currentInput].name}
@@ -398,7 +403,7 @@ export default function PoderNotarial() {
             </div>
           </form>
 
-          <div className="col2" style={{ display: "flex", flexDirection: "column", overflowY: "auto" }}>
+          <div className="col2">
             <PDFViewer style={{ height: "100%" }}>
               <PoderNotarialPDF formData={formData} />
             </PDFViewer>

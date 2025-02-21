@@ -56,6 +56,7 @@ export default function SolCredPerHipot() {
 
   const [currentInput, setCurrentInput] = useState(0);
   const [isExportingPDF, setIsExportingPDF] = useState(false);
+  const [showhid, setShowhid] = useState(false);
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -297,8 +298,12 @@ export default function SolCredPerHipot() {
         <h2 style={{ paddingBlock: "10px" }}>Formulario Solicitud de Credito Personal o Hipotecario</h2>
         <ProgressBar percent={Math.round((100 * (currentInput + 1)) / arregloInputs.length)} tamano={arregloInputs.length} />
         <div className="columnas">
+          <div className="modelo" style={{ display: showhid ? "flex" : "none" }}>
+            <i className="ri-information-fill" onClick={() => setShowhid(!showhid)} ></i>
+            <img src={contrato} alt="ASolicitud de Credito Personal o Hipotecario" />
+          </div>
           <form className="col1" onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1em" }}>
-            <label>{arregloInputs[currentInput].label}</label>
+            <label>{arregloInputs[currentInput].label}<i className="ri-information-fill" onClick={() => setShowhid(!showhid)} ></i></label>
             {arregloInputs[currentInput].type === "select" ? (
               <select
                 name={arregloInputs[currentInput].name}
@@ -336,7 +341,7 @@ export default function SolCredPerHipot() {
               )}
             </div>
           </form>
-          <div className="col2" style={{ display: "flex", flexDirection: "column", overflowY: "auto" }}>
+          <div className="col2">
             <PDFViewer style={{ height: "100%" }}>
               <SolicitudCreditoPDF />
             </PDFViewer>

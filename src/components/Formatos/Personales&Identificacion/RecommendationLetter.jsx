@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function RecommendationLetter() {
   const [currentInput, setCurrentInput] = useState(0);
+  const [showhid, setShowhid] = useState(false);
   const dataContenido = [
     { label: "Nombre del Recomendado:", type: "input", name: "nombre", placeholder: "Ingrese el Nombre" },
     { textarea: "Cualidades del recomendado:", type: "textarea", name: "qualities", placeholder: "Ingrese sus cualidades" },
@@ -174,14 +175,18 @@ export default function RecommendationLetter() {
         <h2 className="text-xl font-bold mb-4">Generador de Carta de Recomendación</h2>
         <ProgressBar percent={Math.round((100 * (currentInput + 1)) / dataContenido.length)} tamano={dataContenido.length} />
         <div className="columnas">
+          <div className="modelo" style={{ display: showhid ? "flex" : "none" }}>
+            <i className="ri-information-fill" onClick={() => setShowhid(!showhid)} ></i>
+            <img src={contrato} alt="Carta de Recomendacion" />
+          </div>
           <form className="col1" onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1em" }}>
             <div style={{ display: "flex", flexDirection: "column" }}>
               {dataContenido[currentInput].type === "input" ? (<div style={{ display: "flex", flexDirection: "column" }}>
-                <label>{dataContenido[currentInput].label}</label>
+                <label>{dataContenido[currentInput].label}<i className="ri-information-fill" onClick={() => setShowhid(!showhid)} ></i></label>
                 <input type="text" name={dataContenido[currentInput].name} placeholder={dataContenido[currentInput].placeholder} value={formData[dataContenido[currentInput].name] || ""} onChange={handleInputChange} style={{ width: "100%", height: "2em", textIndent: "10px", border: "1px solid gray", outline: "none" }} />
               </div>) : (
                 <div style={{ display: "flex", flexDirection: "column" }}>
-                  <label>{dataContenido[currentInput].textarea}</label>
+                  <label>{dataContenido[currentInput].textarea}<i className="ri-information-fill" onClick={() => setShowhid(!showhid)} ></i></label>
                   <textarea name={dataContenido[currentInput].name} id={dataContenido[currentInput].name} onChange={handleInputChange} rows="10" style={{ backgroundColor: "white", color: "black", resize: "none", padding: "5px", border: "1px solid gray", outline: "none" }}>{formData[dataContenido[currentInput].name] || ""}</textarea>
                 </div>
               )}
@@ -200,7 +205,7 @@ export default function RecommendationLetter() {
               </div>
             </div>
           </form>
-          <div className="col2" style={{ display: "flex", flexDirection: "column", overflowY: "auto" }}>
+          <div className="col2">
             <PDFViewer style={{ height: "100%" }}>
               <RecommendationLetterPDF />
             </PDFViewer>

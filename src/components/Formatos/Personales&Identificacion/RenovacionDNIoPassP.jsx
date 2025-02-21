@@ -8,6 +8,7 @@ export default function RenovacionDNIoPassP() {
   const [currentInput, setCurrentInput] = useState(0);
   const [cargaFoto, setCargaFoto] = useState("");
   const [isExportingPDF, setIsExportingPDF] = useState(false);
+  const [showhid, setShowhid] = useState(false);
   const dataContenido = [
     { label: "Nombre Completo:", type: "text", name: "nombrecompleto", placeholder: ["Primer Nombre", "Segundo Nombre", "Apellido Paterno", "Apellido Materno"] },
     { label: "Fecha de Nacimiento:", type: "date", name: "fec_nac" },
@@ -229,6 +230,10 @@ export default function RenovacionDNIoPassP() {
         <h2 className="text-xl font-bold mb-4">Generador de Solicitud Renovacion DNI/Pasaporte</h2>
         <ProgressBar percent={Math.round((100 * (currentInput + 1)) / dataContenido.length)} tamano={dataContenido.length} />
         <div className="columnas">
+          <div className="modelo" style={{ display: showhid ? "flex" : "none" }}>
+            <i className="ri-information-fill" onClick={() => setShowhid(!showhid)} ></i>
+            <img src={contrato} alt="Acuerdo de Confidencialidad" />
+          </div>
           <form
             className="col1"
             onSubmit={handleSubmit}
@@ -237,7 +242,7 @@ export default function RenovacionDNIoPassP() {
             <div style={{ display: "flex", flexDirection: "column" }}>
               {dataContenido[currentInput].type === "checkbox" && (
                 <div style={{ display: "flex", flexDirection: "column" }}>
-                  <strong>{dataContenido[currentInput].label}</strong>
+                  <label>{dataContenido[currentInput].label}<i className="ri-information-fill" onClick={() => setShowhid(!showhid)} ></i></label>
                   {dataContenido[currentInput].options.map((option, index) => (
                     <label key={index}>
                       <input
@@ -265,7 +270,7 @@ export default function RenovacionDNIoPassP() {
 
               {dataContenido[currentInput].type === "date" && (
                 <div style={{ display: "flex", flexDirection: "column", width: "100%", gap: "1em" }}>
-                  <strong>{dataContenido[currentInput].label}</strong>
+                  <label>{dataContenido[currentInput].label}<i className="ri-information-fill" onClick={() => setShowhid(!showhid)} ></i></label>
                   <label
                     style={{
                       display: "flex",
@@ -288,7 +293,7 @@ export default function RenovacionDNIoPassP() {
 
               {dataContenido[currentInput].type === "text" && Array.isArray(dataContenido[currentInput].placeholder) ? (
                 <div style={{ display: "flex", flexDirection: "column", width: "100%", gap: "1em" }}>
-                  <strong>{dataContenido[currentInput].label}</strong>
+                  <label>{dataContenido[currentInput].label}<i className="ri-information-fill" onClick={() => setShowhid(!showhid)} ></i></label>
                   {dataContenido[currentInput].placeholder.map((holders, index) => (
                     <label
                       key={index}
@@ -322,7 +327,7 @@ export default function RenovacionDNIoPassP() {
               ) : (
                 (dataContenido[currentInput].type === "text" || dataContenido[currentInput].type === "email") && (
                   <div>
-                    <strong>{dataContenido[currentInput].label}</strong>
+                    <label>{dataContenido[currentInput].label}<i className="ri-information-fill" onClick={() => setShowhid(!showhid)} ></i></label>
                     <input
                       type="text"
                       name={dataContenido[currentInput].name}
@@ -393,7 +398,7 @@ export default function RenovacionDNIoPassP() {
             </div>
           </form>
 
-          <div className="col2" style={{ display: "flex", flexDirection: "column", overflowY: "auto" }}>
+          <div className="col2">
             <PDFViewer style={{ height: "100%" }}>
               <RenovationLetterPDF />
             </PDFViewer>
