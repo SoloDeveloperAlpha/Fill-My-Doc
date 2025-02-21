@@ -21,7 +21,7 @@ export default function ProgressBar(props) {
         <div
           style={{
             width: `${progress}%`,
-            backgroundColor: "#007bff",
+            backgroundColor: "var(--ColorBg3)",
             height: "100%",
             textAlign: "center",
             lineHeight: "20px",

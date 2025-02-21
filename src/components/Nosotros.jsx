@@ -10,7 +10,6 @@ export default function Nosotros() {
         alignItems: "center",
         textAlign: "center",
         gap: "3em",
-        background: "linear-gradient(135deg, pink, skyblue)",
         color: "#333",
         borderRadius: "15px",
         boxShadow: "0 0 20px rgba(0, 0, 0, 0.2)"
@@ -20,10 +19,9 @@ export default function Nosotros() {
           <h2 style={{
             fontSize: "2.5em",
             marginBottom: "0.5em",
-            color: "var(--ColorBg3)",
-            textShadow: "1px 1px 2px rgba(0, 0, 0, 0.2)"
+            color: "var(--ColorFont1)"
           }}>Nosotros</h2>
-          <p style={{ width: "70%", margin: "0 auto", fontSize: "1.2em" }}>
+          <p style={{ width: "70%", margin: "0 auto", fontSize: "1.2em", color: "white", textShadow: "1px 1px 1px #4e4e4e" }}>
             Somos un equipo apasionado por brindar herramientas accesibles y fáciles de usar para generar documentos PDF y Word en cuestión de minutos.
           </p>
         </div>
@@ -34,7 +32,7 @@ export default function Nosotros() {
             padding: "2em",
             background: "#ffffff",
             borderRadius: "10px",
-            boxShadow: "0 5px 15px rgba(0, 0, 0, 0.1)"
+            boxShadow: "5px 5px 0px #28a745"
           }}>
             <h3 style={{ color: "#28a745", marginBottom: "1em" }}>Misión</h3>
             <p style={{ fontSize: "1.1em" }}>
@@ -47,7 +45,7 @@ export default function Nosotros() {
             padding: "2em",
             background: "#ffffff",
             borderRadius: "10px",
-            boxShadow: "0 5px 15px rgba(0, 0, 0, 0.1)"
+            boxShadow: "5px 5px 0px #ffc107"
           }}>
             <h3 style={{ color: "#ffc107", marginBottom: "1em" }}>Visión</h3>
             <p style={{ fontSize: "1.1em" }}>
@@ -60,7 +58,7 @@ export default function Nosotros() {
             padding: "2em",
             background: "#ffffff",
             borderRadius: "10px",
-            boxShadow: "0 5px 15px rgba(0, 0, 0, 0.1)"
+            boxShadow: "5px 5px 0px #17a2b8"
           }}>
             <h3 style={{ color: "#17a2b8", marginBottom: "1em" }}>Valores</h3>
             <p style={{ fontSize: "1.1em" }}>
@@ -70,7 +68,7 @@ export default function Nosotros() {
         </div>
 
         <div style={{ width: "80%" }}>
-          <p style={{ fontSize: "1.2em", marginBottom: "1em" }}>
+          <p style={{ fontSize: "1.2em", marginBottom: "1em", color: "white", textShadow: "1px 1px 1px #4e4e4e" }}>
             Si encuentras útil nuestra herramienta y deseas apoyarnos, tu contribución será fundamental para seguir mejorando.
           </p>
           <button style={{

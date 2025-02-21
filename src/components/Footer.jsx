@@ -9,7 +9,7 @@ export default function Footer() {
           <li><Link to="/document">Documentos</Link> </li>
           <li><Link to="/nosotros">¿Quienes Somos?</Link> </li>
         </ul>
-        <small>©  FillMyDoc</small>
+        <small style={{ color: "white" }}>©  FillMyDoc</small>
       </div>
     </div>
   )
