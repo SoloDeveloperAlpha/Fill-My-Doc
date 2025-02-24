@@ -7,11 +7,11 @@
 
 :root {
   /* Paleta de colores */
-  --ColorFont1: #1e278f;
-  --ColorFont2: #8f861e;
+  --ColorFont1: #192A3C;
+  --ColorFont2: white;
   --ColorBg1: #568fcb;
-  --ColorBg2: #5957cb;
-  --ColorBg3: #57cacb;
+  --ColorBg2: #566ACC;
+  --ColorBg3: #56CCBD;
   --ShadowLight: rgba(0, 0, 0, 0.527);
 }
 
